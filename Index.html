@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Online Grievance Handling System</title>
+    <script type = 'text/javascript' >
+function changeHashOnLoad() {
+     window.location.href += '#';
+     setTimeout('changeHashAgain()', '50'); 
+}
+
+function changeHashAgain() {
+  window.location.href += '1';
+}
+
+var storedHash = window.location.hash;
+window.setInterval(function () {
+    if (window.location.hash != storedHash) {
+         window.location.hash = storedHash;
+    }
+}, 50);
+window.onload=changeHashOnLoad;
+</script> 
+
+</head>
+
+<frameset rows="120,*" cols="*" frameborder="no" border="0" framespacing="0">
+  <frame src="headerFrame.jsp" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="headerFrame" />
+  <frameset rows="*" cols="175,*" framespacing="0" frameborder="no" border="0">
+    <frame src="optionFrame.html" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="optionFrame" />
+    <frame src="Index.jsp" name="mainFrame" scrolling="Yes" id="mainFrame" title="bodyFrame" />
+  </frameset>
+</frameset>
+<noframes><body>
+</body>
+</noframes></html>
